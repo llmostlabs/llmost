@@ -20,7 +20,8 @@ that is the problem `llmost` is trying to remove.
 
 ## What You Get
 
-<img width="782" height="551" alt="Screenshot 2026-04-08 at 8 25 41 PM" src="https://github.com/user-attachments/assets/a15438a5-d554-4b17-94f4-4fdd0e7c8578" />
+<img width="785" height="565" alt="Screenshot 2026-04-08 at 8 43 18 PM" src="https://github.com/user-attachments/assets/4ea3b8c4-f4c3-419d-8fb4-571b3385d970" />
+
 
 - a terminal UI for setup, models, serving, chat, and logs
 - a guided first-run path with a suggested starter model
