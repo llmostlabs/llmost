@@ -29,6 +29,51 @@ that is the problem `llmost` is trying to remove.
 - terminal chat built in
 - browser chat built in on its own local URL
 
+## Install
+
+If you just want to try it, use one of these two paths.
+
+### Option 1: Download The ZIP
+
+Download:
+
+- [llmost release ZIP](https://github.com/llmostlabs/llmost/archive/refs/heads/llmost-initial-release.zip)
+
+Then in Terminal:
+
+```bash
+cd ~/Downloads
+unzip llmost-initial-release.zip
+cd llmost-llmost-initial-release
+./bin/llmost
+```
+
+### Option 2: Clone The Repo
+
+If you already use Git:
+
+```bash
+cd ~/src/github.com
+git clone --branch llmost-initial-release https://github.com/llmostlabs/llmost.git
+cd llmost
+./bin/llmost
+```
+
+## First Run
+
+On first launch, `llmost` is designed to keep the next step simple:
+
+- open the app
+- press `Enter`
+- let it install the recommended runtime if needed
+- let it download the suggested starter model if needed
+- press `Enter` again to start chatting
+
+You do not need to manually:
+- choose a port first
+- learn a backend launch command
+- wire up an OpenAI-compatible endpoint yourself
+
 ## Fastest First Run
 
 Run:
