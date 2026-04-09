@@ -1,5 +1,5 @@
 {
-  "models_root": "/Users/aref/Models",
+  "models_root": "~/Models",
   "gateway_host": "127.0.0.1",
   "gateway_port": 8788,
   "tui_chat_max_tokens": 0,
