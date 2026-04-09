@@ -34,6 +34,10 @@ that is the problem `llmost` is trying to remove.
 
 If you just want to try it, use one of these two paths.
 
+Python requirement:
+- Python 3.11 or newer is recommended for runtime installation
+- if your machine only has an older Python 3 install, upgrade Python first before expecting backend installs to work cleanly
+
 ### Option 1: Download The ZIP
 
 Download:
