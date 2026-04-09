@@ -1,6 +1,6 @@
 # llmost
 
-`llmost` helps you run local models without needing to learn the usual stack of runtimes, ports, and launch commands first.
+## `llmost` helps you run local models without needing to learn the usual stack of runtimes, ports, and launch commands first.
 
 This release bundle is meant for the simplest path:
 - open the TUI
@@ -19,6 +19,8 @@ If you have been curious about local models but keep running into:
 that is the problem `llmost` is trying to remove.
 
 ## What You Get
+
+<img width="782" height="551" alt="Screenshot 2026-04-08 at 8 25 41 PM" src="https://github.com/user-attachments/assets/a15438a5-d554-4b17-94f4-4fdd0e7c8578" />
 
 - a terminal UI for setup, models, serving, chat, and logs
 - a guided first-run path with a suggested starter model
