@@ -39,6 +39,18 @@ Download:
 
 - [llmost release ZIP](https://github.com/llmostlabs/llmost/archive/refs/heads/llmost-initial-release.zip)
 
+For future release branches, GitHub ZIP downloads follow this pattern:
+
+```text
+https://github.com/llmostlabs/llmost/archive/refs/heads/<branch-name>.zip
+```
+
+So if a later release branch is named `llmost-v0.2.0`, the ZIP would be:
+
+```text
+https://github.com/llmostlabs/llmost/archive/refs/heads/llmost-v0.2.0.zip
+```
+
 Then in Terminal:
 
 ```bash
