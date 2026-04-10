@@ -8,6 +8,11 @@ This release bundle is meant for the simplest path:
 - let `llmost` install what it needs
 - press `Enter` again to start chatting
 
+Service model:
+- one installed copy of `llmost` manages one active local service at a time
+- closing the TUI does not stop that service
+- a separate install in another directory can run its own service if it uses different ports
+
 ## Why Try It
 
 If you have been curious about local models but keep running into:
@@ -29,6 +34,7 @@ that is the problem `llmost` is trying to remove.
 - a local gateway you can point other tools at
 - terminal chat built in
 - browser chat built in on its own local URL
+- `doctor`, `status`, and cleanup commands for recovery
 
 ## Install
 
@@ -37,6 +43,14 @@ If you just want to try it, use one of these two paths.
 Python requirement:
 - Python 3.11 or newer is recommended for runtime installation
 - if your machine only has an older Python 3 install, upgrade Python first before expecting backend installs to work cleanly
+
+If you plan to build the bundled SwiftLM from source (`vendor/SwiftLM/build.sh`):
+- full Xcode is required (Command Line Tools alone are not enough)
+- verify with `xcrun --find metal`
+- if needed, switch with `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`
+- run Xcode first-launch setup: `sudo xcodebuild -runFirstLaunch`
+- if `metal` is found but not runnable, run `sudo xcodebuild -downloadComponent MetalToolchain`
+- if Metal Toolchain download fails with catalog fetch errors, retry `xcodebuild -downloadComponent MetalToolchain`
 
 ### Option 1: Download The ZIP
 
@@ -125,6 +139,54 @@ The TUI shows the browser chat URL on:
 - `Serve`
 - `Use`
 
+## Supported CLI Commands In This Bundle
+
+These commands are intended to work in this binary release:
+
+```bash
+./bin/llmost
+./bin/llmost doctor
+./bin/llmost init
+./bin/llmost scan-models
+./bin/llmost pull-model --list-samples
+./bin/llmost status
+./bin/llmost stop
+./bin/llmost cleanup-ghosts
+./bin/llmost cleanup-ghosts --all-current-root
+```
+
+Useful recovery commands:
+- `./bin/llmost doctor`
+  - shows Python/runtime readiness, `instance_id`, runtime state, and managed processes for this install root
+- `./bin/llmost status`
+  - prints machine-readable runtime state
+- `./bin/llmost cleanup-ghosts`
+  - removes orphaned managed backend processes
+- `./bin/llmost cleanup-ghosts --all-current-root`
+  - one-time sweep of all `llmost`-managed processes for this install root
+
+## One Service Per Install
+
+`llmost` tracks its running service by install instance.
+
+That means:
+- one copy of `llmost` keeps track of one active gateway/backend pair
+- starting a different model from that same copy replaces the existing one cleanly
+- the app does not need to own the whole machine to work correctly
+
+If you intentionally keep a second `llmost` install elsewhere, it can run separately as long as:
+- it has its own ports
+- it has its own config/runtime state
+
+So the rule is:
+- one active service per installed `llmost` instance
+- not necessarily one active service for the whole computer
+
+Operational notes:
+- each install has its own `instance_id`
+- older same-root daemons are still detected for compatibility
+- if several managed daemons exist for the same install root, `llmost` will warn rather than guess
+
 ## Good Fit
 
 Best fit right now:
@@ -145,6 +207,7 @@ This branch is a runnable binary release bundle, not the full source repository.
 - `llmost` writes runtime state and logs locally as it runs
 - the default gateway is local-only on `127.0.0.1`
 - first run may download a runtime and a starter model
+- this branch is a binary release bundle, so source-only repo scripts are not part of the supported flow here
 
 ## License
 
