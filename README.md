@@ -28,7 +28,7 @@ that is the problem `llmost` is trying to remove.
 <img width="785" height="565" alt="Screenshot 2026-04-08 at 8 43 18 PM" src="https://github.com/user-attachments/assets/4ea3b8c4-f4c3-419d-8fb4-571b3385d970" />
 
 
-- a terminal UI for setup, models, serving, chat, and logs
+- a terminal UI for setup, models, serve, tuning, chat, use, and logs
 - a guided first-run path with a suggested starter model
 - automatic runtime install when the recommended backend is missing
 - a local gateway you can point other tools at
@@ -153,6 +153,12 @@ These commands are intended to work in this binary release:
 ./bin/llmost stop
 ./bin/llmost cleanup-ghosts
 ./bin/llmost cleanup-ghosts --all-current-root
+./bin/llmost tune show
+./bin/llmost tune set serve.context_length 8192
+./bin/llmost tune set chat.temperature 0.2
+./bin/llmost tune reset chat.temperature
+./bin/llmost tune reset all
+./bin/llmost tune bench compare --models 2,5 --runtime-idx 1,6 --rounds 1 --strict
 ```
 
 Useful recovery commands:
@@ -164,6 +170,8 @@ Useful recovery commands:
   - removes orphaned managed backend processes
 - `./bin/llmost cleanup-ghosts --all-current-root`
   - one-time sweep of all `llmost`-managed processes for this install root
+- tuning is hard-switched to `./bin/llmost tune ...` scoped keys
+  - legacy `compare-runtimes` and `tune-mlx` entrypoints are removed
 
 ## One Service Per Install
 
