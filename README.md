@@ -26,8 +26,9 @@ On `Home`:
 
 <img width="1097" height="613" alt="Screenshot 2026-04-11 at 11 57 05 PM" src="https://github.com/user-attachments/assets/32f6fb81-18a2-4e70-b51e-48b26ec7fd5b" />
 
-Broader User Gide [here](https://github.com/llmostlabs/llmost/blob/llmost-initial-release/USER_GUIDE.md)
+## Included User Guide
 
+See `USER_GUIDE.md` in this repository for practical workflows and troubleshooting.
 
 ## Essential Commands
 
@@ -74,10 +75,6 @@ Example:
 ```bash
 ./bin/llmost serve --model-id <id> --host 0.0.0.0 --port 8787 --bearer-token '<strong-token>'
 ```
-
-## Included User Guide
-
-See `USER_GUIDE.md` in this repository for practical workflows and troubleshooting.
 
 ## Bundle Notes
 
