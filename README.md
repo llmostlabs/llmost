@@ -16,7 +16,7 @@ On `Home`:
 
 ## What This Binary Offers
 
-- Terminal UI tabs: `Home`, `Setup`, `Models`, `Serve`, `Tuning`, `Chat`, `Use`, `Logs`, `Advisor`
+- Terminal UI tabs: `Home`, `Models`, `Serve`, `Setup`, `Tuning`, `Advisor`, `Chat`, `Use`, `Logs`
 - Local OpenAI-compatible API gateway
 - Runtime install/start/stop from TUI and CLI
 - Model scan/import/pull/register lifecycle
@@ -26,9 +26,12 @@ On `Home`:
 
 <img width="1097" height="613" alt="Screenshot 2026-04-11 at 11 57 05 PM" src="https://github.com/user-attachments/assets/32f6fb81-18a2-4e70-b51e-48b26ec7fd5b" />
 
-## Included User Guide
+## Included Docs
 
-See `USER_GUIDE.md` [link](USER_GUIDE.md) in this repository for practical workflows and troubleshooting.
+- User guide: `docs/user_guide.md` [link](docs/user_guide.md)
+- Troubleshooting: `docs/troubleshooting.md` [link](docs/troubleshooting.md)
+- Security: `docs/security.md` [link](docs/security.md)
+
 
 ## Essential Commands
 
