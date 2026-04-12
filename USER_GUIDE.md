@@ -141,9 +141,30 @@ For non-loopback exposure, include bearer auth header.
 ./bin/llmost python check
 ```
 
-## 8) Safety Notes
+## 8) Advisor and Advanced Features
+
+### Advisor tab
+
+- configure optional remote advisor endpoint/token
+- check advisor connection status from within TUI
+- inspect advisor failures in `Logs` without leaving the app
+
+Advisor is optional. Local model serving and chat continue to work without it.
+
+### Advanced operations
+
+```bash
+./bin/llmost runtime-check
+./bin/llmost cleanup-ghosts
+./bin/llmost tune show
+./bin/llmost tune set serve.context_length 8192
+./bin/llmost tune set chat.thinking_mode off
+```
+
+Use these when you need stronger runtime verification, stale-state cleanup, or more controlled model behavior.
+
+## 9) Safety Notes
 
 - Prefer loopback host for local-only usage.
 - Use bearer token when binding to LAN/public interfaces.
 - Stop one runtime before starting another runtime for the same model flow.
-
