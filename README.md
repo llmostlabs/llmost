@@ -28,7 +28,7 @@ On `Home`:
 
 ## Included User Guide
 
-See `USER_GUIDE.md` in this repository for practical workflows and troubleshooting.
+See `USER_GUIDE.md` [link](USER_GUIDE.md) in this repository for practical workflows and troubleshooting.
 
 ## Essential Commands
 
