@@ -26,6 +26,8 @@ On `Home`:
 
 <img width="1097" height="613" alt="Screenshot 2026-04-11 at 11 57 05 PM" src="https://github.com/user-attachments/assets/32f6fb81-18a2-4e70-b51e-48b26ec7fd5b" />
 
+Broader User Gide [here](https://github.com/llmostlabs/llmost/blob/llmost-initial-release/USER_GUIDE.md)
+
 
 ## Essential Commands
 
