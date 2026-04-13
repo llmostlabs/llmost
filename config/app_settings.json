@@ -1,9 +1,9 @@
 {
-  "instance_id": "llmost-f9702968e97b01db",
-  "models_root": "/Users/aref/Models",
-  "last_selected_model_id": "qwen3-5-0-8b",
+  "instance_id": "",
+  "models_root": "~/Models",
+  "last_selected_model_id": "",
   "gateway_host": "127.0.0.1",
-  "gateway_port": 8788,
+  "gateway_port": 8787,
   "tui_chat_max_tokens": 0,
   "browser_chat_max_tokens": 0,
   "tui_chat_token_base": 0,
